@@ -1,0 +1,52 @@
+---
+output: html_document
+---
+Data Science Fall 2014 Health Project
+===
+**This project analyzes the Health data from the ggplot2 package which has been supplemented with additional synthetic data and stored in an Oracle database.**
+
+###This is how my RStudio is configured:
+```{r}
+sessionInfo()
+```
+
+###These are the packages I load from .Rprofile:
+```{r}
+# To get this to work in your environment, change the following directory/folder path to the path to your project files.
+setwd("/Users/ljs1988/Desktop/health")
+system("cat .Rprofile", intern = TRUE)
+```
+
+###Health Data Model
+
+![](./HealthDataModel.png)  
+
+###Health Data 
+
+####Health.ddl 
+
+```{r}
+# To get this to work in your environment, change the following directory/folder path to the path to your project files.
+setwd("/Users/ljs1988/Desktop/health/02HealthData")
+system("cat Health.ddl", intern = TRUE)
+``` 
+
+####First few rows of Diamonds.dml
+
+```{r}
+# To get this to work in your environment, change the following directory/folder path to the path to your project files.
+setwd("/Users/ljs1988/Desktop/health/02HealthData")
+system("head Health.dml.head", intern = TRUE)
+``` 
+
+####HealthRest.ddl 
+
+```{r}
+# To get this to work in your environment, change the following directory/folder path to the path to your project files.
+setwd("/Users/ljs1988/Desktop/health/02HealthData/")
+system("cat HealthRest.ddl", intern = TRUE)
+```
+
+```{r}
+source("../03Analysis/HealthAnalysis.R", echo = TRUE)
+```
