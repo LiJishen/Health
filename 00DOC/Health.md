@@ -19,14 +19,16 @@ sessionInfo()
 ## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
 ## 
 ## attached base packages:
-## [1] stats     graphics  grDevices utils     datasets  methods   base     
+## [1] graphics  grDevices utils     datasets  stats     methods   base     
 ## 
 ## other attached packages:
-## [1] RJDBC_0.2-4 rJava_0.9-6 DBI_0.2-7  
+## [1] RJDBC_0.2-4   rJava_0.9-6   DBI_0.2-7     ggplot2_1.0.0
 ## 
 ## loaded via a namespace (and not attached):
-## [1] evaluate_0.5.5 formatR_1.0    knitr_1.6      stringr_0.6.2 
-## [5] tools_3.0.3
+##  [1] colorspace_1.2-4 digest_0.6.4     evaluate_0.5.5   formatR_1.0     
+##  [5] grid_3.0.3       gtable_0.1.2     knitr_1.6        MASS_7.3-29     
+##  [9] munsell_0.4.2    plyr_1.8.1       proto_0.3-10     Rcpp_0.11.2     
+## [13] reshape2_1.4     scales_0.2.4     stringr_0.6.2    tools_3.0.3
 ```
 
 ###These are the packages I load from .Rprofile:
@@ -180,15 +182,22 @@ source("../03Analysis/HealthAnalysis.R", echo = TRUE)
 ## [1] TRUE
 ## 
 ## > head(healths)
-##              RACE NUM_LAB_PROCEDURES GENDER      AGE   ATH HT
-## 1           Asian                 46 Female [90-100) 4.756  6
-## 2       Caucasian                 53   Male [90-100) 4.756  4
-## 3       Caucasian                 56   Male [90-100) 4.756  3
-## 4 AfricanAmerican                 72   Male [90-100) 4.756  3
-## 5 AfricanAmerican                 43 Female [90-100) 4.756  5
-## 6 AfricanAmerican                 34 Female [90-100) 4.756  7
+##              RACE NUM_LAB_PROCEDURES GENDER      AGE   ATH
+## 1           Asian                 46 Female [90-100) 4.756
+## 2       Caucasian                 53   Male [90-100) 4.756
+## 3       Caucasian                 56   Male [90-100) 4.756
+## 4 AfricanAmerican                 72   Male [90-100) 4.756
+## 5 AfricanAmerican                 43 Female [90-100) 4.756
+## 6 AfricanAmerican                 34 Female [90-100) 4.756
+##   TIME_IN_HOSPITAL
+## 1                6
+## 2                4
+## 3                3
+## 4                3
+## 5                5
+## 6                7
 ## 
-## > ggplot(healths, aes(HT)) + geom_histogram()
+## > ggplot(healths, aes(TIME_IN_HOSPITAL)) + geom_histogram()
 ```
 
 ```
@@ -199,7 +208,7 @@ source("../03Analysis/HealthAnalysis.R", echo = TRUE)
 
 ```
 ## 
-## > ggplot(data = healths) + geom_density(aes(x = HT, fill = "gray50"))
+## > ggplot(data = healths) + geom_density(aes(x = TIME_IN_HOSPITAL, fill = "gray50"))
 ```
 
 ![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-62.png) 

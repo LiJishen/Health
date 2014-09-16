@@ -12,14 +12,14 @@ possibleError <- tryCatch(
   error=function(e) e
 )
 if(!inherits(possibleError, "error")){
-  healths <- dbGetQuery(jdbcConnection, "select race, num_lab_procedures, gender, age.age, age.time_in_hospital as ath, health.time_in_hospital as ht from age, health")
+  healths <- dbGetQuery(jdbcConnection, "select race, num_lab_procedures, gender, age.age, age.time_in_hospital as ath, health.time_in_hospital as time_in_hospital from age, health")
   healths2 <- dbGetQuery(jdbcConnection, "select gender, num_lab_procedures from health where gender = 'Male' or gender = 'Female'")
   dbDisconnect(jdbcConnection)
 }
 head(healths)
 
-ggplot(healths, aes(HT)) + geom_histogram()
-ggplot(data = healths) + geom_density(aes(x = HT, fill = "gray50"))
+ggplot(healths, aes(TIME_IN_HOSPITAL)) + geom_histogram()
+ggplot(data = healths) + geom_density(aes(x = TIME_IN_HOSPITAL, fill = "gray50"))
 ggplot(healths, aes(x = AGE, y = NUM_LAB_PROCEDURES)) + geom_point()
 ggplot(subset(healths, AGE == "[20-30)" | AGE == "[70-80)"), aes(x = AGE, y = NUM_LAB_PROCEDURES)) + geom_point()
 ggplot(subset(healths, GENDER == "Male" | GENDER == "Female"), aes(x = paste(GENDER, RACE, sep='-'), y = NUM_LAB_PROCEDURES)) + geom_point()
