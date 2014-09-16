@@ -22,13 +22,15 @@ sessionInfo()
 ## [1] graphics  grDevices utils     datasets  stats     methods   base     
 ## 
 ## other attached packages:
-## [1] RJDBC_0.2-4   rJava_0.9-6   DBI_0.2-7     ggplot2_1.0.0
+## [1] lubridate_1.3.3 RJDBC_0.2-4     rJava_0.9-6     DBI_0.2-7      
+## [5] ggplot2_1.0.0  
 ## 
 ## loaded via a namespace (and not attached):
 ##  [1] colorspace_1.2-4 digest_0.6.4     evaluate_0.5.5   formatR_1.0     
-##  [5] grid_3.0.3       gtable_0.1.2     knitr_1.6        MASS_7.3-29     
-##  [9] munsell_0.4.2    plyr_1.8.1       proto_0.3-10     Rcpp_0.11.2     
-## [13] reshape2_1.4     scales_0.2.4     stringr_0.6.2    tools_3.0.3
+##  [5] grid_3.0.3       gtable_0.1.2     knitr_1.6        labeling_0.3    
+##  [9] markdown_0.7.4   MASS_7.3-29      memoise_0.2.1    mime_0.1.2      
+## [13] munsell_0.4.2    plyr_1.8.1       proto_0.3-10     Rcpp_0.11.2     
+## [17] reshape2_1.4     scales_0.2.4     stringr_0.6.2    tools_3.0.3
 ```
 
 ###These are the packages I load from .Rprofile:
@@ -229,7 +231,8 @@ source("../03Analysis/HealthAnalysis.R", echo = TRUE)
 
 ```
 ## 
-## > ggplot(subset(healths, GENDER == "Male" | GENDER == "Female"), aes(x = paste(GENDER, RACE, sep='-'), y = NUM_LAB_PROCEDURES)) + geom_point()
+## > ggplot(subset(healths, GENDER == "Male" | GENDER == "Female"), aes(x = paste(GENDER, RACE, sep='-'), y = NUM_LAB_PROCEDURES)) + 
+## +   geom_point() +  .... [TRUNCATED]
 ```
 
 ![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-65.png) 
@@ -246,8 +249,7 @@ source("../03Analysis/HealthAnalysis.R", echo = TRUE)
 ## 6 Female                 34
 ## 
 ## > ggplot(healths2, aes(NUM_LAB_PROCEDURES, fill=GENDER)) + 
-## +   geom_density(alpha=.5) + scale_fill_manual(values = c("orange", "purple")) + 
-## +   them .... [TRUNCATED]
+## +   geom_density(alpha=.5) + scale_fill_manual(values = c("orange", "purple"))
 ```
 
 ![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-66.png) 

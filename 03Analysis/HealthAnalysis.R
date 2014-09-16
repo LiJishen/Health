@@ -22,10 +22,10 @@ ggplot(healths, aes(TIME_IN_HOSPITAL)) + geom_histogram()
 ggplot(data = healths) + geom_density(aes(x = TIME_IN_HOSPITAL, fill = "gray50"))
 ggplot(healths, aes(x = AGE, y = NUM_LAB_PROCEDURES)) + geom_point()
 ggplot(subset(healths, AGE == "[20-30)" | AGE == "[70-80)"), aes(x = AGE, y = NUM_LAB_PROCEDURES)) + geom_point()
-ggplot(subset(healths, GENDER == "Male" | GENDER == "Female"), aes(x = paste(GENDER, RACE, sep='-'), y = NUM_LAB_PROCEDURES)) + geom_point()
+ggplot(subset(healths, GENDER == "Male" | GENDER == "Female"), aes(x = paste(GENDER, RACE, sep='-'), y = NUM_LAB_PROCEDURES)) + 
+  geom_point() + theme(axis.text.x = element_text(angle = 90, hjust = 1))
 
 head(healths2)
 
 ggplot(healths2, aes(NUM_LAB_PROCEDURES, fill=GENDER)) + 
-  geom_density(alpha=.5) + scale_fill_manual(values = c("orange", "purple")) + 
-  theme(legend.position="none")
+  geom_density(alpha=.5) + scale_fill_manual(values = c("orange", "purple"))
