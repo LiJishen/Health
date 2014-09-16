@@ -22,15 +22,11 @@ sessionInfo()
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## other attached packages:
-## [1] lubridate_1.3.3 ggplot2_1.0.0   knitr_1.6       RJDBC_0.2-4    
-## [5] rJava_0.9-6     DBI_0.2-7      
+## [1] RJDBC_0.2-4 rJava_0.9-6 DBI_0.2-7  
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] colorspace_1.2-4 digest_0.6.4     evaluate_0.5.5   formatR_1.0     
-##  [5] grid_3.0.3       gtable_0.1.2     markdown_0.7.4   MASS_7.3-29     
-##  [9] memoise_0.2.1    mime_0.1.2       munsell_0.4.2    plyr_1.8.1      
-## [13] proto_0.3-10     Rcpp_0.11.2      reshape2_1.4     scales_0.2.4    
-## [17] stringr_0.6.2    tools_3.0.3
+## [1] evaluate_0.5.5 formatR_1.0    knitr_1.6      stringr_0.6.2 
+## [5] tools_3.0.3
 ```
 
 ###These are the packages I load from .Rprofile:
@@ -42,14 +38,14 @@ system("cat .Rprofile", intern = TRUE)
 ```
 
 ```
-## [1] "library(\\\"ggplot2\\\", lib.loc=\\\"/Library/Frameworks/R.framework/Versions/3.0/Resources/library\\\")\""  
-## [2] "library(\\\"gplots\\\", lib.loc=\\\"/Library/Frameworks/R.framework/Versions/3.0/Resources/library\\\")\""   
-## [3] "library(\\\"DBI\\\", lib.loc=\\\"/Library/Frameworks/R.framework/Versions/3.0/Resources/library\\\")\"    "  
-## [4] "library(\\\"rJava\\\", lib.loc=\\\"/Library/Frameworks/R.framework/Versions/3.0/Resources/library\\\")\"    "
-## [5] "library(\\\"RJDBC\\\", lib.loc=\\\"/Library/Frameworks/R.framework/Versions/3.0/Resources/library\\\")\"    "
-## [6] "library(\\\"plyr\\\", lib.loc=\\\"/Library/Frameworks/R.framework/Versions/3.0/Resources/library\\\")\"    " 
-## [7] "library(\\\"tabplot\\\", lib.loc=\\\"/Library/Frameworks/R.framework/Versions/3.0/Resources/library\\\")\"  "
-## [8] "library(\\\"lubridate\\\", lib.loc=\\\"/Library/Frameworks/R.framework/Versions/3.0/Resources/library\\\")\""
+## [1] "library(\"ggplot2\", lib.loc=\"/Library/Frameworks/R.framework/Versions/3.0/Resources/library\")"  
+## [2] "library(\"gplots\", lib.loc=\"/Library/Frameworks/R.framework/Versions/3.0/Resources/library\")"   
+## [3] "library(\"DBI\", lib.loc=\"/Library/Frameworks/R.framework/Versions/3.0/Resources/library\")   "   
+## [4] "library(\"rJava\", lib.loc=\"/Library/Frameworks/R.framework/Versions/3.0/Resources/library\")    "
+## [5] "library(\"RJDBC\", lib.loc=\"/Library/Frameworks/R.framework/Versions/3.0/Resources/library\")    "
+## [6] "library(\"plyr\", lib.loc=\"/Library/Frameworks/R.framework/Versions/3.0/Resources/library\")  "   
+## [7] "library(\"tabplot\", lib.loc=\"/Library/Frameworks/R.framework/Versions/3.0/Resources/library\") " 
+## [8] "library(\"lubridate\", lib.loc=\"/Library/Frameworks/R.framework/Versions/3.0/Resources/library\")"
 ```
 
 ###Health Data Model
