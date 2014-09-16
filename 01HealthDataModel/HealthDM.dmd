@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="HealthDM" id="4FCEE2C3-A645-615F-26FF-65B8C719F733" version="3.5">
+<createdBy>jishen,binwei</createdBy>
+<createdTime>2014-09-15 18:02:30 UTC</createdTime>
+<ownerDesignName>HealthDM</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>4FCEE2C3-A645-615F-26FF-65B8C719F733</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="E6BF0072-E777-B7C1-3E36-C860A18A8CE4">
+<designStoragePath>/Health</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
+</OSDM_Design>
